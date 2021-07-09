@@ -14,19 +14,25 @@ class stone:
 class handOfStones(object):
     stones = []
 
-    def __init__(self,stones):
-        self.stones = stones
+    def __init__(self):
+        self.stones = []
+        
+
+    def addStone(self,stoneImage,x,y):
+        self.stones.append(stone(stoneImage,x,y))
+        self.sortByXlocation()
    
     def sortByXlocation(self):
-        pass
+        self.stones.sort(key=lambda x: x.xloc, reverse=False)
 
     def print(self):
-        rowindex = -1        
-        for row in self.stones:
-            rowindex = rowindex + 1
-            stoneindex = -1
-            for stone in row:
-                stoneindex = stoneindex+1
-                print("Row: " + str(rowindex) + ", index: " + str(stoneindex) + ", name: " + self.stones[rowindex][stoneindex].name)
+        #rowindex = -1        
+        #for row in self.stones:
+        #    rowindex = rowindex + 1
+        #    stoneindex = -1
+        #    for stone in row:
+        #        stoneindex = stoneindex+1
+        for stone in self.stones:
+            print("X: " + str(stone.xloc) + ", Y: " + str(stone.yloc) + ", name: " + stone.stoneImage.name)
 
 

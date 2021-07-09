@@ -70,32 +70,32 @@ _, img6_bin = cv2.threshold(img6_gray, ThreshMin, ThreshMax, cv2.THRESH_BINARY)
 
 
 print("Image1:")
-hand = hos.handOfStones(stones.findStonesInImage(img_bin,img,images))
+hand = stones.findStonesInImage(img_bin,img,images)
 print("Rows in hand:" + str(len(hand.stones)))
 hand.print()
 
 print("Image2:")
-hand2 = hos.handOfStones(stones.findStonesInImage(img2_bin,img2,images))
+hand2 = stones.findStonesInImage(img2_bin,img2,images)
 print("Rows in hand:" + str(len(hand2.stones)))
 hand2.print()
 
 print("Image3:")
-hand3 = hos.handOfStones(stones.findStonesInImage(img3_bin,img3,images))
+hand3 = stones.findStonesInImage(img3_bin,img3,images)
 print("Rows in hand:" + str(len(hand3.stones)))
 hand3.print()
 
 print("Image4:")
-hand4 = hos.handOfStones(stones.findStonesInImage(img4_bin,img4,images))
+hand4 = stones.findStonesInImage(img4_bin,img4,images)
 print("Rows in hand:" + str(len(hand4.stones)))
 hand4.print()
 
 print("Image5:")
-hand5 = hos.handOfStones(stones.findStonesInImage(img5_bin,img5,images))
+hand5 = stones.findStonesInImage(img5_bin,img5,images)
 print("Rows in hand:" + str(len(hand5.stones)))
 hand5.print()
 
 print("Image6:")
-hand6 = hos.handOfStones(stones.findStonesInImage(img6_bin,img6,images))
+hand6 = stones.findStonesInImage(img6_bin,img6,images)
 print("Rows in hand:" + str(len(hand6.stones)))
 hand6.print()
 #Syntax:

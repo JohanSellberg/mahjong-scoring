@@ -2,7 +2,7 @@ import cv2
 import math
 import numpy as np
 import classes.stoneimage as si
-#import classes.handofstones as hos
+import handofstones as hos
 import helpers
 import glob
 
@@ -65,10 +65,8 @@ def getStone(img,approx):
 
 def findStonesInImage(canny,image,stones):
     contours, hierarchy = cv2.findContours(canny, cv2.RETR_CCOMP,cv2.CHAIN_APPROX_NONE)
-    rowIndex = -1
-    columnIndex = -1
-    lastX = -30
-    hand = []
+    
+    hand = hos.handOfStones()
     for cnt in contours:
         area = cv2.contourArea(cnt)
         #cv2.drawContours(image,cnt,-1,(255,0,0),2)
@@ -89,12 +87,8 @@ def findStonesInImage(canny,image,stones):
                 if(correct.id != -1):
                     # Found a matching stone
                     print(correct.type + " " + correct.detail + " x:" + str(x) + " y:" + str(y))
-                    if(x > lastX+30):
-                        rowIndex = rowIndex+1
-                        hand.append([])
                     
-                    hand[rowIndex].append(correct) # Only a reference to a stone Image.. todo: Needs a new object to represent the stone with coordinates and such!
-                    lastX = x
+                    hand.addStone(correct,x,y)
 
                     cv2.rectangle(image, (x,y),(x+w,y+h),(0,255,0),1)                    
                 else:
