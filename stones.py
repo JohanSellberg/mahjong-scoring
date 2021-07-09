@@ -25,7 +25,7 @@ def addStoneToHand(stone):
     pass
 
 def matchStone(img,stones):
-    matchResult = si.stoneImage(np.zeros((5,5,3), dtype=np.uint8),np.zeros((5,5,3), dtype=np.uint8),"NoImage",-1,0,0)
+    matchResult = si.stoneImage(np.zeros((5,5,3), dtype=np.uint8),np.zeros((5,5,3), dtype=np.uint8),"NoImage",-1,)
     threshhold = .85
     matches = []
     for stone in stones:
