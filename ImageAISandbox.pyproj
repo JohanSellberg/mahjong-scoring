@@ -28,7 +28,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ImageAISandbox.py" />
-    <Compile Include="Oldmethod.py" />
     <Compile Include="classes\stoneimage.py" />
     <Compile Include="stones.py">
       <SubType>Code</SubType>
@@ -40,17 +39,15 @@
     <Folder Include="images\stones\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="images\cirkel2.jpg" />
-    <Content Include="images\cirkel2.png" />
-    <Content Include="images\cirkel2_2.png" />
-    <Content Include="images\mahjong2.jpg" />
-    <Content Include="images\mahjong2.png" />
     <Content Include="images\org.jpg" />
     <Content Include="images\org2.jpg" />
     <Content Include="images\org3.jpg" />
-    <Content Include="images\org3_resize.jpg" />
     <Content Include="images\org4.jpg" />
-    <Content Include="images\org_resize.jpg" />
+    <Content Include="images\org5.jpg" />
+    <Content Include="images\org6.jpg" />
+    <Content Include="images\org7.jpg" />
+    <Content Include="images\org8.jpg" />
+    <Content Include="images\org9.jpg" />
     <Content Include="images\stones\bamboo1.jpg" />
     <Content Include="images\stones\bamboo2.jpg" />
     <Content Include="images\stones\bamboo3.jpg" />
